@@ -25,18 +25,30 @@ public class Search {
         int end = numbers.length - 1;
         boolean flag = false;
         int index = -1;
-        while (start <=end) {
+        while (start <= end) {
             int mid = (start + end) / 2;
             if (numbers[mid] == no) {
-                flag = true;
-                index = mid;
+                return new SearchResult(true,mid);
             }
             else if (no > numbers[mid])
                 start = mid + 1;
-            else if (no < numbers[mid])
+            else
                 end = mid - 1;
 
         }
         return new SearchResult(flag,index);
+    }
+    public int recursiveBinarySearch(int no,int start, int end){
+        if(start <= end){
+            int mid = (start + end) / 2;
+            if (numbers[mid] == no) {
+                return mid;
+            }
+            else if (no > numbers[mid])
+                return recursiveBinarySearch(no,mid+1,end);
+            else
+                return recursiveBinarySearch(no,start,mid-1);
+        }
+        return -1;
     }
 }
