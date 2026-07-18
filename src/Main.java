@@ -9,5 +9,9 @@ public class Main {
         int[] sw = s.bubbleSort();
         for (int n : sw)
             System.out.print(n+",");
+        int[] ss = s.selectionSort();
+        System.out.println();
+        for (int n : ss)
+            System.out.print(n+",");
     }
 }
