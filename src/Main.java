@@ -13,5 +13,9 @@ public class Main {
         System.out.println();
         for (int n : ss)
             System.out.print(n+",");
+        int[] is = s.insertionSort();
+        System.out.println();
+        for (int n : is)
+            System.out.print(n+",");
     }
 }
