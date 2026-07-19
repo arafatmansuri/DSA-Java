@@ -3,7 +3,7 @@
 public class Main {
     public static void main(String[] args) {
         int[] numbers = {5,30,12,10,1,44,11,50,2,3};
-
+        int[] quickNumbers = {5,30,12,10,1,44,11,50,2,32,3};
         Sort s = new Sort(numbers);
 
         int[] sw = s.bubbleSort();
@@ -17,5 +17,6 @@ public class Main {
         System.out.println();
         for (int n : is)
             System.out.print(n+",");
+        s.quickSort(quickNumbers,0,quickNumbers.length-1);
     }
 }
