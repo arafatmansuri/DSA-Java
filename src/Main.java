@@ -3,20 +3,13 @@
 public class Main {
     public static void main(String[] args) {
         int[] numbers = {5,30,12,10,1,44,11,50,2,3};
-        int[] quickNumbers = {5,30,12,10,1,44,11,50,2,32,3};
+        int[] arr = {3,5,1,4,6,2};
+
         Sort s = new Sort(numbers);
 
-        int[] sw = s.bubbleSort();
-        for (int n : sw)
-            System.out.print(n+",");
-        int[] ss = s.selectionSort();
-        System.out.println();
-        for (int n : ss)
-            System.out.print(n+",");
-        int[] is = s.insertionSort();
-        System.out.println();
-        for (int n : is)
-            System.out.print(n+",");
-        s.quickSort(quickNumbers,0,quickNumbers.length-1);
+        s.mergeSort(arr,0,arr.length-1);
+        for (int n : arr){
+            System.out.println(n);
+        }
     }
 }
