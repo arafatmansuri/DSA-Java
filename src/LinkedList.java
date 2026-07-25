@@ -24,6 +24,34 @@ public class LinkedList {
             current.next = newNode;
         }
     }
+    public void addFirst(int data){
+        Node newNode = new Node(data);
+        if(head != null)
+            newNode.next = head;
+        head = newNode;
+    }
+    public void addAfter(int data,int element){
+        Node newNode = new Node(data);
+        Node current = head;
+        while(current.data != element){
+            current = current.next;
+        }
+        newNode.next = current.next;
+        current.next = newNode;
+    }
+    public void addBefore(int data,int element){
+        Node newNode = new Node(data);
+        Node current = head;
+        if(current.data == element) {
+            addFirst(data);
+            return;
+        }
+        while(current.next.data != element){
+            current = current.next;
+        }
+        newNode.next = current.next;
+        current.next = newNode;
+    }
     public void display(){
         Node current = head;
         while(current.next != null){
