@@ -48,6 +48,30 @@ public class DoublyLinkedList {
         newNode.prev = current;
         current.next = newNode;
     }
+    public void addFirst(int data){
+        newNode = new DNode(data);
+        DNode current = head;
+        if (current != null) {
+            current.prev = newNode;
+            newNode.next = current;
+        }
+        head = newNode;
+    }
+    public void addAfter(int data,int element){
+        if (isEmpty())
+            return;
+        if (isExists(element))
+            return;
+        newNode = new DNode(data);
+        DNode current = head;
+        while(current.data != element)
+            current = current.next;
+        newNode.next = current.next;
+        newNode.prev = current;
+        if(current.next != null)
+            current.next.prev = newNode;
+        current.next = newNode;
+    }
     @Override
     public String toString(){
         if (head == null)
