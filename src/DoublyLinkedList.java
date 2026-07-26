@@ -72,6 +72,23 @@ public class DoublyLinkedList {
             current.next.prev = newNode;
         current.next = newNode;
     }
+    public void addBefore(int data,int element){
+        if (isEmpty())
+            return;
+        if (isExists(element))
+            return;
+        newNode = new DNode(data);
+        DNode current = head;
+        while(current.data != element)
+            current = current.next;
+        newNode.prev = current.prev;
+        newNode.next = current;
+        if (current.prev != null)
+            current.prev.next = newNode;
+        else
+            head = newNode;
+        current.prev = newNode;
+    }
     @Override
     public String toString(){
         if (head == null)

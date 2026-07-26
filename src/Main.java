@@ -10,8 +10,9 @@ public class Main {
         la.addAfter(20,50);
         la.addAfter(40,30);
 //        la.addAfter(60,50);
-//        la.addBefore(25,30);
-//        la.addBefore(0,1);
+        la.addBefore(25,30);
+        la.addBefore(0,1);
+        la.addBefore(12,1);
 //        la.deleteFirst();
 //        la.deleteLast();
 //        la.deleteLast();
