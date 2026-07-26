@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        LinkedList la = new LinkedList();
+        DoublyLinkedList la = new DoublyLinkedList();
 
         la.add(10);
         la.add(50);
@@ -20,10 +20,10 @@ public class Main {
 //        la.addBefore(25,30);
 //        la.addBefore(30,40);
 //        la.addBefore(15,20);
-        System.out.println(la);
-        la.deleteLast();
-        System.out.println(la);
-        la.delete(10);
+//        System.out.println(la);
+//        la.deleteLast();
+//        System.out.println(la);
+//        la.delete(10);
         System.out.println(la);
     }
 }
