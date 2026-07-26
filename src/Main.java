@@ -2,8 +2,9 @@ public class Main {
     public static void main(String[] args) {
         LinkedList la = new LinkedList();
 
-//        la.add(10);
-//        la.add(50);
+        la.add(10);
+        la.add(50);
+        la.add(30);
 //        la.addFirst(20);
 //        la.addFirst(1);
 //        la.addAfter(30,20);
@@ -16,7 +17,13 @@ public class Main {
 //        la.deleteLast();
 //        la.deleteFirst();
 //        la.delete(30);
-//        la.delete(2);
+//        la.addBefore(25,30);
+//        la.addBefore(30,40);
+//        la.addBefore(15,20);
+        System.out.println(la);
+        la.deleteLast();
+        System.out.println(la);
+        la.delete(10);
         System.out.println(la);
     }
 }

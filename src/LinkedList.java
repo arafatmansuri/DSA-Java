@@ -12,19 +12,26 @@ class Node{
 }
 public class LinkedList {
     Node head = null;
-    public boolean isEmpty(){
+    private boolean isEmpty(){
         if (head == null) {
-            System.out.println("List is empty");
+            System.out.println("List is empty!");
             return true;
         }
         return false;
     }
-    public boolean isExists(int data,Node current){
-        if (current.data == data) {
-            System.out.println("List is empty");
+    private boolean isExists(int data){
+        Node current = head;
+        while (current.next != null){
+            if (current.data == data){
+                return false;
+            }
+            current = current.next;
+        }
+        if (current.data != data){
+            System.out.println("Element "+data+ " not found!");
             return true;
         }
-        return false;
+        return  false;
     }
     public void add(int data){
         Node newNode = new Node(data);
@@ -47,6 +54,8 @@ public class LinkedList {
     public void addAfter(int data,int element){
         if (isEmpty())
             return;
+        if (isExists(element))
+            return;
         Node newNode = new Node(data);
         Node current = head;
         while(current.data != element){
@@ -57,6 +66,8 @@ public class LinkedList {
     }
     public void addBefore(int data,int element){
         if (isEmpty())
+            return;
+        if (isExists(element))
             return;
         Node newNode = new Node(data);
         Node current = head;
@@ -81,6 +92,10 @@ public class LinkedList {
         if (isEmpty())
             return;
         Node current = head;
+        if (current.next == null) {
+            deleteFirst();
+            return;
+        }
         while(current.next.next !=null){
             current = current.next;
         }
@@ -89,23 +104,19 @@ public class LinkedList {
     public void delete(int data){
         if (isEmpty())
             return;
+        if (isExists(data))
+            return;
         Node current = head;
+        if (current.next == null || current.data == data){
+            deleteFirst();
+            return;
+        }
         while(current.next.data !=data){
             current = current.next;
         }
         Node temp = current.next;
         current.next = current.next.next;
         temp = null;
-    }
-    public void display(){
-        if (isEmpty())
-            return;
-        Node current = head;
-        while(current.next != null){
-            System.out.print(current.data + ", ");
-            current = current.next;
-        }
-        System.out.println(current.data);
     }
     public String toString(){
         if (head == null)
