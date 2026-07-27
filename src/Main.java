@@ -13,11 +13,12 @@ public class Main {
         la.addBefore(25,30);
         la.addBefore(0,1);
         la.addBefore(12,1);
+        la.deleteFirst();
+        la.deleteFirst();
+        la.deleteLast();
+        la.deleteLast();
 //        la.deleteFirst();
-//        la.deleteLast();
-//        la.deleteLast();
-//        la.deleteFirst();
-//        la.delete(30);
+        la.delete(50);
 //        la.addBefore(25,30);
 //        la.addBefore(30,40);
 //        la.addBefore(15,20);

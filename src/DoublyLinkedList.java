@@ -89,6 +89,27 @@ public class DoublyLinkedList {
             head = newNode;
         current.prev = newNode;
     }
+    public void deleteFirst(){
+        DNode current = head;
+        current.next.prev = null;
+        head = current.next;
+        current = null;
+    }
+    public void deleteLast(){
+        DNode current = head;
+        while (current.next != null)
+            current = current.next;
+        current.prev.next = null;
+        current = null;
+    }
+    public void delete(int data){
+        DNode current = head;
+        while (current.data != data)
+            current = current.next;
+        current.prev.next = current.next;
+        current.next.prev = current.prev;
+        current = null;
+    }
     @Override
     public String toString(){
         if (head == null)
