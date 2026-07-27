@@ -90,20 +90,34 @@ public class DoublyLinkedList {
         current.prev = newNode;
     }
     public void deleteFirst(){
+        if (isEmpty())
+            return;
         DNode current = head;
-        current.next.prev = null;
-        head = current.next;
+        if (current.next != null) {
+            current.next.prev = null;
+            head = current.next;
+        }else
+            head = null;
         current = null;
     }
     public void deleteLast(){
+        if (isEmpty())
+            return;
         DNode current = head;
         while (current.next != null)
             current = current.next;
-        current.prev.next = null;
+        if (current.prev != null)
+            current.prev.next = null;
+        else
+            head = null;
         current = null;
     }
     public void delete(int data){
         DNode current = head;
+        if (current.data == data) {
+            deleteFirst();
+            return;
+        }
         while (current.data != data)
             current = current.next;
         current.prev.next = current.next;
