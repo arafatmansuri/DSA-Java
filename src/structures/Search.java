@@ -1,3 +1,5 @@
+package structures;
+
 class SearchResult {
     boolean isFound;
     int index;
@@ -9,7 +11,7 @@ class SearchResult {
 public class Search {
     int[] numbers;
 
-    Search(int[] numbers){
+    public Search(int[] numbers){
         this.numbers = numbers;
     }
 
