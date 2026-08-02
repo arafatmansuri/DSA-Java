@@ -1,3 +1,5 @@
+package structures;
+
 public class Sort {
     int[] numbers;
     int size;
