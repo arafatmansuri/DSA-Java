@@ -18,7 +18,7 @@ public class TwoSum {
         }
         return null;
     }
-    public int[] twoPointer(int target){
+    public int[] withHashMap(int target){
         int i = 0;
         int j = arr.length-1;
         Map<Integer,Integer> seen = new HashMap<Integer,Integer>();
