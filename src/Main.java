@@ -1,21 +1,22 @@
-import problems.Anagram;
-import problems.FindDuplicate;
-import problems.TravellingSalesman;
-import problems.TwoSum;
+import problems.*;
 import structures.Stack;
 import structures.StackLinkedList;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
+    public static String sortString(char[] chars){
+        Arrays.sort(chars);
+        StringBuilder str = new StringBuilder();
+        for (char aChar : chars) {
+            str.append(aChar);
+        }
+        return str.toString();
+    }
     public static void main(String[] args) {
-        Anagram ts = new Anagram("angara","nagara");
-        boolean result = ts.withCountMap();
-        if(result)
-            System.out.println("It's Anagram");
-        else
-            System.out.println("It's not an Anagram");
+        GroupAnagram ga = new GroupAnagram();
+//        System.out.println(ga.bruteForce());
+        ga.WithSignatureMap(new String[]{"eat","tea","tan","ate","nat","bat"});
+
     }
 }

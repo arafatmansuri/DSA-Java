@@ -19,8 +19,6 @@ public class TwoSum {
         return null;
     }
     public int[] withHashMap(int target){
-        int i = 0;
-        int j = arr.length-1;
         Map<Integer,Integer> seen = new HashMap<Integer,Integer>();
         for (int k = 0; k < arr.length; k++) {
             int need = target - arr[k];
