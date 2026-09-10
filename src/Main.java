@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        ValidPalindrome vp = new ValidPalindrome();
-        System.out.println(vp.twoPointer("A man, a plan, a canal: Panama"));
+        MoveZeros mz = new MoveZeros();
+        mz.withTwoPointer(new int[]{0,1,0,3,12});
     }
 }
