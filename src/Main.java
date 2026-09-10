@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        ConsecutiveSequence ps = new ConsecutiveSequence();
-        System.out.println(Arrays.toString(ps.withSet(new int[]{1,2,3,4})));
+        ValidPalindrome vp = new ValidPalindrome();
+        System.out.println(vp.twoPointer("A man, a plan, a canal: Panama"));
     }
 }
