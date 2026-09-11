@@ -6,7 +6,8 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        MoveZeros mz = new MoveZeros();
-        mz.withTwoPointer(new int[]{0,1,0,3,12});
+        ThreeSum ts = new ThreeSum();
+        System.out.println(ts.WithSortAndTwoPointer(new int[]{-1,0,1,2,-1,-4}));
+//        ts.bruteForce(new int[]{0,1,1});
     }
 }
