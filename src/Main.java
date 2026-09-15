@@ -6,8 +6,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        ReversePolishNotation rpn = new ReversePolishNotation();
-//        System.out.println(rpn.withStack(new String[]{"4","13","5","/","+"}));
-        System.out.println(rpn.withStack(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"}));
+        DailyTemperatures dt = new DailyTemperatures();
+        System.out.println(Arrays.toString(dt.withStack(new int[]{73,74,75,71,69,72,76,73})));
     }
 }
